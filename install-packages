@@ -1,0 +1,7 @@
+# install packages from the list contained in a file (in this example file name is install-packages.txt, and you should use your own)
+
+#!/bin/bash
+for package in $(cat install-packages.txt)
+do
+  sudo apt-get –y install $package
+done
