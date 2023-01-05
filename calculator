@@ -2,6 +2,11 @@
 
 #!/bin/bash
 
+function read_numbers() {
+     read -p "Enter Number1: " number1
+     read -p "Enter Number2: " number2
+}
+
 while true
 do
   echo "1. Add"
@@ -12,26 +17,23 @@ do
 
   read -p "Enter your choice: " choice
 
-  case $choice in
+case $choice in
+
     1)
-        read -p "Enter Number1: " number1
-        read -p "Enter Number2: " number2
+        read_numbers
         echo Answer=$(( $number1 + $number2 ))
         ;;
     2)
-        read -p "Enter Number1: " number1
-        read -p "Enter Number2: " number2
+        read_numbers
         echo Answer=$(( $number1 - $number2 ))
         ;;
 
     3)
-        read -p "Enter Number1: " number1
-        read -p "Enter Number2: " number2
+        read_numbers
         echo Answer=$(( $number1 * $number2 ))
         ;;
     4)
-        read -p "Enter Number1: " number1
-        read -p "Enter Number2: " number2
+        read_numbers
         echo Answer=$(( $number1 / $number2 ))
         ;;
     5)
