@@ -1,3 +1,5 @@
+№ This scrypt shows you the name of a month according to the number you specify.
+
 #!/bin/bash
 
 month_number=$1
