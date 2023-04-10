@@ -1,14 +1,14 @@
 #!/bin/bash
 
-CHAT_ID="напиши свое" # id чата куда отправляем
-TEXT="$1" # текст который отправляем
-BOT_AUTH_TOKEN="напиши свое" # Токен бота
+CHAT_ID="some_id" # id of chat to which we need to send a message
+TEXT="$1" # text we'll send
+BOT_AUTH_TOKEN="your_token" # Telegram-bot token
 
-# -s, --silent        Silent mode (тихий режим)
-# -S, --show-error    Show error even when -s is used (показывать ошибки даже в тихом режиме)
-# -i, --include       Include protocol response headers in the output (включить в вывод заголовки ответа)
-#  -m, --max-time <time> Maximum time allowed for the transfer (Сколько времени ждать ответа)
-# Передаем все данные в curl, которым сделаем запрос к API Telegram на отправку сообщения.
+# -s, --silent        Silent mode
+# -S, --show-error    Show error even when -s is used
+# -i, --include       Include protocol response headers in the output
+#  -m, --max-time <time> Maximum time allowed for the transfer
+# send all parameters to "curl", by means of which we'll call API Telegram to send a message.
 curl -sS -i --max-time 30 \
         --header 'Content-Type: application/json' \
         --request 'POST' \
