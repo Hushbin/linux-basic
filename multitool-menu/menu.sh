@@ -104,7 +104,6 @@ $(ColorGreen '3)') ОЗУ
 $(ColorGreen '4)') Версия ядра
 $(ColorGreen '5)') Check All
 $(ColorGreen '0)') Выход
-$(ColorGreen 'Заходи на https://yodo.im учиться дальше!')
 "
 
 read a
